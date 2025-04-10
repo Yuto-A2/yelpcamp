@@ -2,8 +2,9 @@ const mongoose = require('mongoose');
 const cities = require('./cities');
 const {places, descriptors} = require('./seedHelpers');
 const Campground = require('../models/campground');
+const dbUrl = process.env.DB_URL
 
-mongoose.connect('mongodb+srv://dbUser:k0gknMFqmMyWDRFu@cluster0.cyvs7.mongodb.net/', {
+mongoose.connect(dbUrl, {
     useNewUrlParser: true,
     // useCreateIndex: true,
     useUnifiedTopology: true
